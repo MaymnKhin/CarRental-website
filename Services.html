@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cars Detail</title>
+    <link rel="stylesheet" href="servicesStyle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="services-page">
+        <nav>
+            <div class="logo"> 
+                <h4>AZoom</h4>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#Slide1">Pricing</a></li>
+                <li><a href="index.html#Slide1">Services</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="loginform.html">Login</a></li>
+            </ul>
+    
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+
+
+        <h1>Your Booking Details</h1> <hr>
+        <div class="services-container">
+            
+            <div class="carInfo">
+                <div class="carImage">
+                    <img style="border-radius: 5px;" width="100%" height="100%" src="https://bloximages.chicago2.vip.townnews.com/journaltimes.com/content/tncms/assets/v3/editorial/1/17/117f855a-649a-5b66-a8cc-3ab3462c8fb2/60a43615738c7.image.jpg?resize=1200%2C827" alt="Car Image">
+                </div>
+
+                <div class="carInfo-detail">
+                    <h2>Toyota Honda Fit</h2>
+                    <ul>
+                        <li>Location Branch</li>
+                        <li><span>Car color</span> <span>Seater</span> <span>Bag</span></li>
+                        <li>Condition Short Description</li>
+                    </ul>
+                    <hr>
+                    <ul style="margin-bottom: 10px;">
+                        <li>NO SMOKING</li>
+                        <li>NO PETS</li>
+                        <li>NO DURIAN</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="Bill-Info">
+                <div class="rentInfo" id="PickUp">
+                    <h2>Rent Information</h2>
+                    <div class="dateTimeInfo">
+                        <form>
+                            <div id="startDate">
+                                <h4>Start Date</h4>
+                                <input type="date" name="stratDate" id="startDate">
+                            </div>
+                            <div><h1>&#x2192;</h1></div>
+                            <div id="EndDate">
+                                <h4>Return Date</h4>
+                                <input type="date" name="stratDate" id="startDate">
+                            </div>
+                        </form>
+                    </div>
+        
+                    <div class="dropdown">
+                        <h4 style="padding-top: 5px;">Pick Up Location</h4>
+                        <div class="select">
+                            <select name="Office Branch" id="office">
+                                <option value="Lakeside Garden">Lakeside, 610279</option>
+                                <option value="Orchard">Orchard, 670179</option>
+                              </select>
+                        </div>
+                    </div>
+        
+                    <div class="Coupon-code">
+                        <form>
+                            <h4>Enter Coupon Code</h4>
+                            <input type="text" placeholder="RTCV4VB" id="CouponCode">
+                        </form>
+                    </div>
+    
+                    <hr>
+    
+                    <div class="TotalPay">
+                        <h3>Rental Fee: SGD 100</h3>
+                       <a href="#ReturnCar"><button id="showReturnCarButton" onclick="formAppear();">Rent Now</button></a> 
+                    </div>
+                </div>
+
+                <!--RETURN BILLING INFO-->
+                <div class="rentInfo hidden" id="ReturnCar">
+                    <h2>Return Information</h2>
+                    <div class="dateTimeInfo">
+                        <form>
+                            <div id="startDate">
+                                <h4>Start Date</h4>
+                                <input type="date" name="stratDate" id="startDate">
+                            </div>
+                            <div><h1>&#x2192;</h1></div>
+                            <div id="EndDate">
+                                <h4>Return Date</h4>
+                                <input type="date" name="stratDate" id="startDate">
+                            </div>
+                        </form>
+                    </div>
+        
+                    <div class="dropdown">
+                        <h4 style="padding-top: 5px;">Return Location</h4>
+                        <div class="select">
+                            <select name="Office Branch" id="office">
+                                <option value="Lakeside Garden">Lakeside, 610279</option>
+                                <option value="Orchard">Orchard, 670179</option>
+                              </select>
+                        </div>
+                    </div>
+        
+                    <div class="Coupon-code">
+                        <form>
+                            <h4>Inspection</h4>
+                            <button id="checkButton" onclick="checkCarCondition()">Check Inspection</button>
+                        </form>
+                    </div>
+    
+                    <hr>
+    
+                    <div class="TotalPay">
+                        <h3>Total Fee: SGD 500</h3>
+                        <button type="button" onclick="showPaymentSuccessModal();">Pay Bill</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="overlayPayment" id="overlayPayment">
+                <div class="Successmodal">
+                    <span class="close-button-success" onclick="hidePaymentSuccessModal()">&times;</span>
+                    <img src="icons8-double-tick-64.png" alt="success">
+                    <h2 style="color: rgb(0, 203, 7);">Payment Successful! </h2>
+                    <p>Thank you for your Bookings.</p>
+                    <p>Hope you have a nice trip with us!</p>
+                    <p>Transaction ID: 123456789</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    
+    <script src="nav.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,589 @@
+ .dropdown{
+    display: flex;
+    justify-content: space-between;
+    min-width: 15em; 
+ }
+
+ .dropdown * {
+     box-sizing: border-box;
+ }
+
+ .select{
+     width:45%;
+     background: wheat;
+     align-items: center;
+     border: 1px black solid;
+     border-radius: 0.5em;
+     padding: 10px;
+     cursor: pointer;
+     transition: background 0.3s; 
+ }
+
+ .selected-clicked{
+     border: 2px black solid;
+     box-shadow: 0 0 0.8em black;
+
+ }
+
+ .select:hover{
+     background: grey;
+ }
+   
+
+ #office{
+    
+    list-style: none;
+    background: wheat;
+    position: relative;
+   
+}
+
+
+/*-----START------*/
+
+*{
+    margin: 0px;
+    border: 0px;
+    box-sizing: border-box;
+}
+
+.services-page{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 80px;
+    margin-left: 60px;
+    font-family: 'Lato', sans-serif;
+    letter-spacing: 1px;
+}
+
+.services-page h1{
+    margin-left: 50px;
+    align-self: center;
+}
+
+.services-container{
+    
+    font-family: 'Lato', sans-serif;
+    width: 1155px;
+    padding: 30px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.Bill-Info{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: space-around;
+    width: 40%;
+    row-gap: 30px;
+}
+
+.carInfo{
+    letter-spacing: 1px;
+    font-weight: 300;
+    display: flex;
+    flex-direction: column;
+    align-items: space-around;
+    width: 55%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
+.carInfo:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.carImage{
+    justify-self: flex-start;
+    border: 1px solid black;
+    align-self: center;
+    margin: 20px;
+    width: 90%;
+    border-radius: 5px;
+}
+
+.carInfo-detail h2{
+    margin-left: 30px;
+    margin-bottom: 10px;
+}
+
+.carInfo-detail ul li{
+    padding: 10px;
+}
+
+.carInfo-detail ul li span{
+    padding-right: 15px;
+}
+
+.rentInfo{
+    border: 1px solid black;
+    width: 100%;   /*Change*/
+    display: flex;
+    flex-direction: column;
+    align-items: space-around;
+    letter-spacing: 1px;
+    font-weight: 300;
+    padding: 20px;
+    height: fit-content;
+}
+
+#ReturnCar.hidden {
+    opacity: 0;
+    transform: translateY(-20px);
+    display: none; 
+    transition: opacity 0.3s ease-in, transform 0.3s ease-in, display 0s 0.3s;
+}
+
+#ReturnCar.visible {
+    opacity: 1;
+    transform: translateY(0);
+    display: block;
+}
+
+.dateTimeInfo form{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding: 5px;
+}
+
+.dropdown{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding: 5px;
+}
+
+.Coupon-code form{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding: 5px;
+}
+
+#CouponCode{
+    border: 1px black solid;
+    border-radius: 0.5em;
+    padding: 8px;
+    width: 45%;
+}
+
+#checkButton{
+    cursor: pointer;
+    border: 1px black solid;
+    border-radius: 0.5em;
+    padding: 8px;
+    width: 45%;
+    background-color: #f99270;
+    color: #fff;
+    transition: background-color 0.4s ease-in;
+}
+
+#checkButton.green {
+    background-color: #4CAF50;
+}
+
+#checkButton:hover{
+    background-color: coral;
+}
+
+
+.TotalPay{
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+}
+
+.TotalPay button{
+    margin-top: 20px;
+    width: 90%;
+    align-self: center;
+    padding: 15px 0;
+    text-align: center;
+    border-radius: 20px;
+    font-weight: 500px;
+    background: rgb(14, 14, 14);
+    color: white;
+    cursor: pointer;
+}
+
+.TotalPay button:hover{
+    background-color: grey;
+    border: 1px solid #000000;
+    color: #000000;
+}
+
+
+
+hr{
+    margin: 15px;
+    width: 90%;
+    clear:both;
+    display:block;             
+    background-color: rgb(171, 166, 166);
+    height: 1px;
+}
+
+/*----------------NAVIGATION----------------------------*/
+
+nav{
+    background-color: rgb(12, 12, 12);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    transition: 0.6s;
+    min-height: 60px;
+    font-family: 'Lato', sans-serif;
+    z-index: 10000000;
+}
+
+nav.sticky{
+    min-height: 50px;
+    background-color: #000000;
+}
+
+nav.sticky .nav-links a{
+    color:rgb(254, 251, 251)
+}
+
+nav.sticky .nav-links a:hover{
+    color: black;
+    background-color: aliceblue;
+}
+
+.logo{
+
+    position: relative;
+    color:rgb(251, 248, 248);
+   /* text-transform:uppercase; */
+    letter-spacing: 3px;
+    font-size: 20px;
+    text-transform: uppercase;
+    transition: 0.2s;
+}
+
+.nav-links{
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+}
+
+.nav-links li{
+    position: relative;
+    list-style: none;
+}
+
+.nav-links a{
+    position: relative;
+    text-transform: uppercase;
+    display: block;
+    color: rgb(254, 252, 252);
+    padding: 10px 25px;
+    border-radius: 50px;
+    transition: 0.5s;
+    margin: 0 5px;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-weight: 500;
+    font-size: 12px;
+}
+
+.nav-links a:hover{
+    color: black;
+    background-color: aliceblue;
+}
+
+.burger{
+    display: none;
+}
+
+.burger div{
+    width: 24px;
+    height: 2px;
+    background-color: rgb(224, 227, 234);
+    margin: 5px;
+}
+
+@media screen and (max-width: 768px){
+    body{
+        overflow-x: hidden;
+    }
+
+
+   .nav-links{
+        width: 100%;
+        position: absolute;
+        right: 0px;
+        height: 92vh;
+        top: 9vh;
+        background-color: black;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transform: translate(100%);
+        transition: transform 0.5s ease-in;
+        
+   }
+
+   .nav-links li{
+        opacity: 0;
+   }
+
+   .burger{
+        display: block;
+        cursor: pointer;
+   }
+
+   .content{
+        position: relative;
+   }
+
+
+   
+}
+
+.nav-active{
+    transform: translate(0%);
+}
+
+@keyframes navLinkFade{
+    from{
+        opacity: 0;
+        transform: translate(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translate(0px);
+    }
+}
+
+/*-----------PAYMENT-------------*/
+
+.Payment-Container{
+    width: 55%;
+    height: fit-content;
+    font-family: 'Lato', sans-serif;
+    background-color:rgb(241, 150, 150);
+    border-radius: 30px;
+    box-shadow: 0 5px 15px rgdba(0,0,0,0.35);
+    min-height: 450px;
+    margin-top: 50px;
+}
+
+.paymentInfo{
+    letter-spacing: 1px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.paymentInfo h1{
+    margin-top: 20px;
+    margin-left: 35px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.CreditCard-Info{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-self: center;
+}
+
+.CreditCard-Info p{
+    margin-bottom: 7px;
+    font-weight: 700px;
+    font-size: medium;
+}
+
+
+#CCInfo3{
+    display: flex;
+    justify-content: space-between;
+}
+
+.CreditCard-Info input{
+    background-color: rgb(234, 225, 225);
+    border: none;
+    padding: 9px 14px;
+    font-size: 13px;
+    border-radius: 5px;
+    width: 70%;
+    outline: none;
+    margin-bottom: 15px;
+}
+
+#CCInfo4{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+#CCInfo4 button{
+    margin-top: -5px;
+    margin-right: 40px;
+    width: 25%;
+    align-self: flex-end;
+    padding: 15px 0;
+    text-align: center;
+    border-radius: 20px;
+    font-weight: 500px;
+    background: rgb(0, 0, 0);
+    color: white;
+    cursor: pointer;
+}
+
+#CCInfo4 button:hover{
+    background-color: rgb(48, 214, 3);
+    border: 2px solid #000000;
+    color: #000000;
+}
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+    border: 1px solid black;
+    border-radius: 10px;
+    z-index: 10;
+    background-color: white;
+    width: 500px;
+    max-width: 80%;
+  }
+
+
+  .modal.active {
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  .modal-header .close-button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+
+  .modal-body {
+    padding: 10px 15px;
+  }
+
+  #overlay {
+    position: fixed;
+    opacity: 0;
+    transition: 200ms ease-in-out;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .5);
+    pointer-events: none;
+  }
+  
+  #overlay.active {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+
+  @media screen and (max-width: 900px){
+
+    .services-page h1{
+       margin-right: 40px;
+    }
+    
+    .services-container{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding-right: 20px;
+    }
+
+    .Bill-Info{
+        border-radius: 10px;
+        width: 100%;
+    }
+
+    .carInfo{
+        border-radius: 10px;
+        margin-bottom: 30px;
+        width: 100%;
+        align-self: flex-start;
+    }
+
+    #PickUp{
+        border-radius: 10px;
+        width: 100%;
+        align-self: flex-start;
+    }
+
+    #ReturnCar{
+        border-radius: 10px;
+        width: 100%;
+        align-self: flex-start;
+    }
+  }
+
+  .overlayPayment {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+}
+
+/* Styling for the modal box */
+.Successmodal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.Successmodal p {
+    letter-spacing: 1px;
+    font-size: 200;
+    margin: 5px;
+}
+
+.Successmodal h2{
+    margin: 10px;
+}
+
+/* Styling for the close button */
+.close-button-success {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+  
+  
+
+
